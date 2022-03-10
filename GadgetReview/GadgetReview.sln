@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetReview.Repository", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetReview.Identity", "GadgetReview.Identity\GadgetReview.Identity.csproj", "{4DEC815F-2E4F-44F1-BDDB-D1A5277E08D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetReview.Services", "GadgetReview.Services\GadgetReview.Services.csproj", "{6D917B8F-A1C5-4408-A045-F884A04B9EA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4DEC815F-2E4F-44F1-BDDB-D1A5277E08D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DEC815F-2E4F-44F1-BDDB-D1A5277E08D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DEC815F-2E4F-44F1-BDDB-D1A5277E08D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D917B8F-A1C5-4408-A045-F884A04B9EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D917B8F-A1C5-4408-A045-F884A04B9EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D917B8F-A1C5-4408-A045-F884A04B9EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D917B8F-A1C5-4408-A045-F884A04B9EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

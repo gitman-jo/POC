@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VWxn6jlOjHPsW3o2Jdrz0JWoA6NVE2F53wSz2SwGgvhhCvOdA1JBxzEgoIIfQV3VTrOwTHwvgmZd1U3iwJAY1Q==",
+  "dgSpecHash": "yV807+qYuxSQoStSsKZGmbKXzsqUg+96/mmq+5CjhPmrBn/wgE+xKoXFpNyKdi7x12zUNw19zhmwh4kKuaDa8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Jho PC\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

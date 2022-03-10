@@ -1,3 +1,4 @@
+using GadgetReview.Models.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,9 +13,9 @@ namespace GadgetReview.Web
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            Configuration = config;
         }
 
         public IConfiguration Configuration { get; }
@@ -22,6 +23,7 @@ namespace GadgetReview.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CloudinaryOptions>(Configuration.GetSection("CloudinaryOptions"));
             services.AddRazorPages();
         }
 

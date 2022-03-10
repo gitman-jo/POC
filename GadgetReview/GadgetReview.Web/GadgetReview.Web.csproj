@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GadgetReview.Models\GadgetReview.Models.csproj" />
+  </ItemGroup>
+
 </Project>
