@@ -19,7 +19,7 @@ namespace GadgetReview.Repository
         {
             _config = config;
         }
-        public async Task<IdentityResult> CreatAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public async Task<IdentityResult> CreateAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             var dataTable = new DataTable();
