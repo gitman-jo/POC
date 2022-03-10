@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.23" />
+    <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GadgetReview.Identity\GadgetReview.Identity.csproj" />
     <ProjectReference Include="..\GadgetReview.Models\GadgetReview.Models.csproj" />
+    <ProjectReference Include="..\GadgetReview.Repository\GadgetReview.Repository.csproj" />
+    <ProjectReference Include="..\GadgetReview.Services\GadgetReview.Services.csproj" />
   </ItemGroup>
 
 </Project>

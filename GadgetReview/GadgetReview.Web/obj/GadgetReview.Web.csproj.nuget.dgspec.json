@@ -4,6 +4,73 @@
     "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\GadgetReview.Identity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\GadgetReview.Identity.csproj",
+        "projectName": "GadgetReview.Identity",
+        "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\GadgetReview.Identity.csproj",
+        "packagesPath": "C:\\Users\\Jho PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jho PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj"
+              },
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -64,14 +131,14 @@
         }
       }
     },
-    "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj": {
+    "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj",
-        "projectName": "GadgetReview.Web",
-        "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj",
+        "projectName": "GadgetReview.Repository",
+        "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj",
         "packagesPath": "C:\\Users\\Jho PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\obj\\",
+        "outputPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jho PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,6 +170,185 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\GadgetReview.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\GadgetReview.Services.csproj",
+        "projectName": "GadgetReview.Services",
+        "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\GadgetReview.Services.csproj",
+        "packagesPath": "C:\\Users\\Jho PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jho PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.16.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.16.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj",
+        "projectName": "GadgetReview.Web",
+        "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\GadgetReview.Web.csproj",
+        "packagesPath": "C:\\Users\\Jho PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jho PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\GadgetReview.Identity.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Identity\\GadgetReview.Identity.csproj"
+              },
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Models\\GadgetReview.Models.csproj"
+              },
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Repository\\GadgetReview.Repository.csproj"
+              },
+              "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\GadgetReview.Services.csproj": {
+                "projectPath": "C:\\Users\\Jho PC\\Desktop\\POC\\GadgetReview\\GadgetReview.Services\\GadgetReview.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.23, )"
+            },
+            "Microsoft.IdentityModel": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

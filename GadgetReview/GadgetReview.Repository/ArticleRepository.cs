@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GadgetReview.Repository
 {
-    class ArticleRepository: IArticleRepository
+    public class ArticleRepository: IArticleRepository
     {
         private readonly IConfiguration _config;
 
