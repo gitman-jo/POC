@@ -8,8 +8,9 @@ namespace GadgetReview.Models.ArticleComment
 {
     public class ArticleCommentCreate
     {
-        public int ArticelCommentId { get; set; }
-        public int? ParentArticelCommentId { get; set; }
+        public int ArticleCommentId { get; set; }
+        public int? ParentArticleCommentId { get; set; }
+        public int ArticleId { get; set; }
 
         [Required(ErrorMessage = "Content is required")]
         [MinLength(10, ErrorMessage = "Must be atleast 10-300 characters")]
