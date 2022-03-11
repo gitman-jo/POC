@@ -1,5 +1,5 @@
-﻿using Dapper;
-using GadgetReview.Models.Account;
+﻿using GadgetReview.Models.Account;
+using Dapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -15,13 +15,16 @@ namespace GadgetReview.Repository
     public class AccountRepository : IAccountRepository
     {
         private readonly IConfiguration _config;
+
         public AccountRepository(IConfiguration config)
         {
             _config = config;
         }
+
         public async Task<IdentityResult> CreateAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
+
             var dataTable = new DataTable();
             dataTable.Columns.Add("Username", typeof(string));
             dataTable.Columns.Add("NormalizedUsername", typeof(string));
@@ -39,29 +42,33 @@ namespace GadgetReview.Repository
                 user.PasswordHash
                 );
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("Default Connection")))
+            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 await connection.OpenAsync(cancellationToken);
-                await connection.ExecuteAsync("Account_Insert", 
-                    new {Account = dataTable.AsTableValuedParameter("dbo.AccountType")}, commandType: CommandType.StoredProcedure);
-            }
-            return IdentityResult.Success;
 
+                await connection.ExecuteAsync("Account_Insert",
+                    new { Account = dataTable.AsTableValuedParameter("dbo.AccountType") }, commandType: CommandType.StoredProcedure);
+            }
+
+            return IdentityResult.Success;
         }
 
         public async Task<ApplicationUserIdentity> GetByUsernameAsync(string normalizedUsername, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
+
             ApplicationUserIdentity applicationUser;
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("Default Connection")))
+            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 await connection.OpenAsync(cancellationToken);
+
                 applicationUser = await connection.QuerySingleOrDefaultAsync<ApplicationUserIdentity>(
                     "Account_GetByUsername", new { NormalizedUsername = normalizedUsername },
                     commandType: CommandType.StoredProcedure
                     );
             }
+
             return applicationUser;
         }
     }

@@ -12,4 +12,3 @@ namespace GadgetReview.Services
         public Task<DeletionResult> DeletePhotoAsync(string publicId);
     }
 }
-

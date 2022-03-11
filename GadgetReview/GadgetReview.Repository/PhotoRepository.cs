@@ -1,5 +1,5 @@
-﻿using Dapper;
-using GadgetReview.Models.Photo;
+﻿using GadgetReview.Models.Photo;
+using Dapper;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;

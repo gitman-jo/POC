@@ -1,16 +1,14 @@
-﻿using GadgetReview.Models.Account;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using GadgetReview.Models.Photo;
 using GadgetReview.Repository;
 using GadgetReview.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GadgetReview.Web.Controllers
 {
@@ -19,16 +17,16 @@ namespace GadgetReview.Web.Controllers
     public class PhotoController : ControllerBase
     {
         private readonly IPhotoRepository _photoRepository;
-        private readonly IArticleRepository _articleRepository;
+        private readonly IBlogRepository _blogRepository;
         private readonly IPhotoService _photoService;
 
         public PhotoController(
             IPhotoRepository photoRepository,
-            IArticleRepository articleRepository,
+            IBlogRepository blogRepository,
             IPhotoService photoService)
         {
             _photoRepository = photoRepository;
-            _articleRepository = articleRepository;
+            _blogRepository = blogRepository;
             _photoService = photoService;
         }
 
@@ -85,9 +83,9 @@ namespace GadgetReview.Web.Controllers
             {
                 if (foundPhoto.ApplicationUserId == applicationUserId)
                 {
-                    var articles = await _articleRepository.GetAllByUserIdAsync(applicationUserId);
+                    var blogs = await _blogRepository.GetAllByUserIdAsync(applicationUserId);
 
-                    var usedInBlog = articles.Any(b => b.PhotoId == photoId);
+                    var usedInBlog = blogs.Any(b => b.PhotoId == photoId);
 
                     if (usedInBlog) return BadRequest("Cannot remove photo as it is being used in published blog(s).");
 

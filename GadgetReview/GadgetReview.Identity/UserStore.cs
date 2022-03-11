@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GadgetReview.Identity
 {
-    public class UserStore: 
+    public class UserStore :
         IUserStore<ApplicationUserIdentity>,
         IUserEmailStore<ApplicationUserIdentity>,
         IUserPasswordStore<ApplicationUserIdentity>
@@ -128,5 +128,6 @@ namespace GadgetReview.Identity
         {
             // Nothing to dispose
         }
+
     }
 }

@@ -1,11 +1,12 @@
-﻿using GadgetReview.Models.Account;
-using GadgetReview.Services;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GadgetReview.Models.Account;
+using GadgetReview.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GadgetReview.Web.Controllers
 {
@@ -52,11 +53,12 @@ namespace GadgetReview.Web.Controllers
                     Token = _tokenService.CreateToken(applicationUserIdentity)
                 };
 
-                return Ok(applicationUser); 
+                return Ok(applicationUser);
             }
 
             return BadRequest(result.Errors);
         }
+
         [HttpPost("login")]
         public async Task<ActionResult<ApplicationUser>> Login(ApplicationUserLogin applicationUserLogin)
         {
@@ -85,6 +87,5 @@ namespace GadgetReview.Web.Controllers
 
             return BadRequest("Invalid login attempt.");
         }
-
     }
 }
