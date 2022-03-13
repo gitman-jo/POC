@@ -1,1 +1,72 @@
-<p>comments works!</p>
+<!-- comments -->
+<div class="container">
+  <div class="card">
+    <div class="commentbox">
+      <div class="col-12 col-sm-12 header">
+        <h4>Comments</h4>
+      </div>
+      <div class="col-12 col-sm-12 body">
+        <div class="comment-container">
+          <div class="comment-form">
+            <!-- <p>Leave a comment</p> -->
+            <form>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment"
+                  formControlName="comment"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success">
+                  Post Comment
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="comments">
+      <!-- <h6>No Comments found</h6> -->
+      <ul style="list-style: none">
+        <li>
+          <div class="col-12 col-sm-12 comment-container">
+            <div class="card">
+              <div class="card-body">Parent Comment</div>
+            </div>
+            <div class="actions">
+              <span>dd/mm/yyyy</span><span class="divider"></span
+              ><button class="btn btn-sm btn-info">Reply</button
+              ><span class="divider"></span
+              ><button class="btn btn-sm btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+            <div class="childCommentBox">
+              <div datacontainer></div>
+              <ul style="list-style: none">
+                <li>
+                  <div class="col-12 col-sm-12 comment-container">
+                    <div class="card">
+                      <div class="card-body">Child Comment</div>
+                    </div>
+                    <div class="actions">
+                      <span>dd/mm/yyyy</span><span class="divider"></span
+                      ><button class="btn btn-sm btn-info">Reply</button
+                      ><span class="divider"></span
+                      ><button class="btn btn-sm btn-danger">
+                        <i class="fa fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

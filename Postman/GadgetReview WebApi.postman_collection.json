@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "15e539da-ef23-434d-a762-2add7074f1e4",
-		"name": "BlogLab WebApi",
+		"name": "GadgetReview WebApi",
 		"description": "Simple tests for the API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
